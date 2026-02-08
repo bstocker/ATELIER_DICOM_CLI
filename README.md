@@ -14,11 +14,11 @@ Séquence 1 : Codespace de Github
 Objectif : Création d'un Codespace Github  
 Difficulté : Très facile (~5 minutes)
 -------------------------------------------------------------------------------------------------------
-1° - Créer vous un compte sur GitHub : Si besoin, un vidéo pour vous aider à créer votre propre compte GitHUB : [Créer un compte GitHUB](https://docs.github.com/fr/get-started/onboarding/getting-started-with-your-github-account) A noter que **si vous possédez déjà un compte GitHUB vous pouvez le conserver pour réaliser cet atelier**. Pas besion d'en créer un nouveau.  
+**1°** - Créer vous un compte sur GitHub : Si besoin, un vidéo pour vous aider à créer votre propre compte GitHUB : [Créer un compte GitHUB](https://docs.github.com/fr/get-started/onboarding/getting-started-with-your-github-account) A noter que **si vous possédez déjà un compte GitHUB vous pouvez le conserver pour réaliser cet atelier**. Pas besion d'en créer un nouveau.  
   
-2° - **Faites un Fork de ce projet**. Si besion, voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ) 
+**2°** - **Faites un Fork de ce projet**. Si besion, voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ) 
   
-3° - Ensuite depuis l'onglet **[CODE]** de votre nouveau Repository, **ouvrez un Codespace Github**. Choisir une instance de 4 coeurs 16Go puis lancer votre Codespace.
+**3°** - Ensuite depuis l'onglet **[CODE]** de votre nouveau Repository, **ouvrez un Codespace Github**. Choisir une instance de 4 coeurs 16Go puis lancer votre Codespace.
 
 ---------------------------------------------------
 Séquence 2 : Création de l'environnement de travail
