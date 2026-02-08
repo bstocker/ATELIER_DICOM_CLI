@@ -55,7 +55,7 @@ BIN_DIR="$(ls -d "$PWD"/dcm4che-*/bin | head -n 1)"
 export PATH="$BIN_DIR:$PATH"
 ```
   
-Utilities
+Les outils ci-dessous sont à présent en service
 ---------
 - [agfa2dcm][]: Extract DICOM files from Agfa BLOB file
 - [agfa2sr][]: Extract concatenated XML Agfa Reports and convert them to DICOM SR Documents
