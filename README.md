@@ -29,7 +29,7 @@ Difficulté : Simple (~5 minutes)
 Vous allez dans cette séquence compiler et mettre en service votre caisse à outils qui vous permettront de travailler vos images DICOM.  
 Dans le terminal du Codespace copier/coller les codes ci-dessous etape par étape :  
 
-**Mise en service des outils**  
+**Mise en service des outils DICOM CLI**  
 ```
 sudo apt-get update
 sudo apt-get install -y openjdk-17-jdk
