@@ -14,10 +14,47 @@ Séquence 1 : Codespace de Github
 Objectif : Création d'un Codespace Github  
 Difficulté : Très facile (~5 minutes)
 -------------------------------------------------------------------------------------------------------
-**Faites un Fork de ce projet**. Si besion, voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ) 
+1° - Créer vous un compte sur GitHub : Si besoin, un vidéo pour vous aider à créer votre propre compte GitHUB : [Créer un compte GitHUB](https://docs.github.com/fr/get-started/onboarding/getting-started-with-your-github-account) A noter que **si vous possédez déjà un compte GitHUB vous pouvez le conserver pour réaliser cet atelier**. Pas besion d'en créer un nouveau.  
   
-Ensuite depuis l'onglet [CODE] de votre nouveau Repository, **ouvrez un Codespace Github**.
+2° - **Faites un Fork de ce projet**. Si besion, voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ) 
+  
+3° - Ensuite depuis l'onglet **[CODE]** de votre nouveau Repository, **ouvrez un Codespace Github**. Choisir une instance de 4 coeurs 16Go puis lancer votre Codespace.
 
+---------------------------------------------------
+Séquence 2 : Création de l'environnement de travail
+---------------------------------------------------
+Objectif : Mettre en services les outils DICOM CLI  
+Difficulté : Simple (~5 minutes)
+---------------------------------------------------
+Vous allez dans cette séquence compiler et mettre en service votre caisse à outils qui vous permettront de travailler vos images DICOM.  
+Dans le terminal du Codespace copier/coller les codes ci-dessous etape par étape :  
+
+**Mise en service des outils**  
+```
+sudo apt-get update
+sudo apt-get install -y openjdk-17-jdk
+```
+```
+sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+sudo update-alternatives --set javac /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
+```
+```
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH="$JAVA_HOME/bin:/usr/bin:$PATH"
+```
+```
+./mvnw -DskipTests install -pl dcm4che-assembly -am
+```
+```
+unzip -o dcm4che-assembly/target/dcm4che-*-bin.zip
+```
+```
+BIN_DIR="$(ls -d "$PWD"/dcm4che-*/bin | head -n 1)"
+```
+```
+export PATH="$BIN_DIR:$PATH"
+```
+  
 Utilities
 ---------
 - [agfa2dcm][]: Extract DICOM files from Agfa BLOB file
