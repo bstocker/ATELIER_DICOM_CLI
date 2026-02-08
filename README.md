@@ -1,78 +1,23 @@
-dcm4che DICOM Toolkit & Library
-===============================
-Sources: https://github.com/dcm4che/dcm4che  
-Binaries: https://sourceforge.net/projects/dcm4che/files/dcm4che3  
-Issue Tracker: https://github.com/dcm4che/dcm4che/issues  
-Build Status: [![Build](https://github.com/dcm4che/dcm4che/actions/workflows/build.yml/badge.svg)](https://github.com/dcm4che/dcm4che/actions/workflows/build.yml)
+------------------------------------------------------------------------------------------------------
+ATELIER DICOM
+------------------------------------------------------------------------------------------------------
+L’idée en 30 secondes : **dcm4che** est une **boîte à outils DICOM** open source qui permet en pratique de communiquer avec des PACS (envoyer, recevoir, rechercher et rapatrier des examens via storescu, storescp, findscu, movescu), d’inspecter et valider des fichiers DICOM (dcmdump, dcmvalidate pour lire les tags et vérifier la conformité), et de convertir les images médicales vers des formats courants (dcm2jpg, dcm2png, etc.) ; en résumé, c’est un **couteau suisse pour tester, intégrer et manipuler du DICOM** dans des projets d’**imagerie médicale**, que ce soit en contexte technique, pédagogique ou d’**intégration SIH**.
 
-This is a complete rewrite of [dcm4che-2.x](http://www.dcm4che.org/confluence/display/d2/).
+dcm4che met à disposition des **outils en ligne de commande (CLI)** qui permettent de **manipuler des fichiers DICOM**, d’envoyer ou de recevoir des images médicales et d’analyser leur contenu ; ces outils peuvent s’enchaîner pour former un flux de travail complet autour de l’imagerie médicale. **dcm4che constitue aussi un véritable "moteur DICOM"** : il sert de base logicielle à des systèmes plus complets, notamment des PACS comme dcm4che**e**.  
 
-One main focus was to minimize the memory footprint of the DICOM data sets.
-It already provides modules to store/fetch configuration data to/from LDAP,
-compliant to the DICOM Application Configuration Management Profile,
-specified in [DICOM PS 3.15](http://dicom.nema.org/medical/dicom/current/output/html/part15.html#chapter_H), Annex H.
-
-dcm4che uses a native library for the compression and decompression of images. Here is the list of supported systems and architectures:
-
-| System  | Architecture | Package        | Requirement          |
-|:--------|:-------------|:---------------|:---------------------|
-| Linux   | x86 64-bit   | linux-x86-64   | GLIBC_2.17           |
-| Linux   | ARM 64-bit   | linux-aarch64  | GLIBC_2.27           |
-| Linux   | ARM 32-bit   | linux-armv7a   | GLIBC_2.17           |
-| Windows | x86 64-bit   | windows-x86-64 | Windows 10 or higher |
-| Windows | x86 32-bit   | windows-x86    | Windows 10 or higher |
-| Mac OS  | x86 64-bit   | macosx-x86-64  | Mac OS 11 or higher  |
-| Mac OS  | ARM 64-bit   | macosx-aarch64 | Mac OS 12 or higher  |
-
-Build
------
-
-Make sure you have Java 17 (JDK) or newer installed.
-
-Run the [Maven Wrapper](https://maven.apache.org/wrapper/) script for building:
-
-    ./mvnw install
-
-or on Windows:
-
-    .\mvnw install
-
-Modules
--------
-- dcm4che-audit
-- dcm4che-audit-keycloak
-- dcm4che-conf
-  - dcm4che-conf-api
-  - dcm4che-conf-api-hl7
-  - dcm4che-conf-json
-  - dcm4che-conf-json-schema
-  - dcm4che-conf-ldap
-  - dcm4che-conf-ldap-audit
-  - dcm4che-conf-ldap-hl7
-  - dcm4che-conf-ldap-imageio
-  - dcm4che-conf-ldap-schema
-- dcm4che-core
-- dcm4che-dcmr
-- dcm4che-deident
-- dcm4che-dict
-- dcm4che-dict-priv
-- dcm4che-emf
-- dcm4che-hl7
-- dcm4che-image
-- dcm4che-imageio
-- dcm4che-imageio-opencv
-- dcm4che-imageio-rle
-- dcm4che-js-dict
-- dcm4che-json
-- dcm4che-mime
-- dcm4che-net
-- dcm4che-net-audit
-- dcm4che-net-hl7
-- dcm4che-net-imageio
-- dcm4che-soundex
-- dcm4che-ws-rs
-- dcm4che-xdsi
-- dcm4che-jboss-modules
+**Architecture PACS :** Ci-dessous, les différentes couches techniques d'un PACS cible.   
+  
+![Screenshot Actions](Architecture_cible.png) 
+  
+-------------------------------------------------------------------------------------------------------
+Séquence 1 : Codespace de Github
+-------------------------------------------------------------------------------------------------------
+Objectif : Création d'un Codespace Github  
+Difficulté : Très facile (~5 minutes)
+-------------------------------------------------------------------------------------------------------
+**Faites un Fork de ce projet**. Si besion, voici une vidéo d'accompagnement pour vous aider dans les "Forks" : [Forker ce projet](https://youtu.be/p33-7XQ29zQ) 
+  
+Ensuite depuis l'onglet [CODE] de votre nouveau Repository, **ouvrez un Codespace Github**.
 
 Utilities
 ---------
